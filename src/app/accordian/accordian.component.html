@@ -1,0 +1,9 @@
+<div class="card">
+    <div class="card-header" (click)="onclick()">
+        {{title}}
+        <i class="fa" [ngClass]="{'fa-caret-down':isExpanded === false, 'fa-caret-up' :isExpanded}" ></i>
+    </div>
+    <div class="card-body" [class.d-none]="!isExpanded">
+        <ng-content></ng-content>
+    </div>
+</div>
